@@ -3,7 +3,46 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Amanda",
+  "email": "amanda@scout.com",
   "password": "password",
+  "password_confirmation": "password"
 }
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "amanda@scout.com",
+  "password": "password"
+}
+
+### Scores Index
+GET http://localhost:3000/scores.json
+
+### Scores Create
+POST http://localhost:3000/scores.json
+Content-Type: application/json
+
+{
+"title": "Test name",
+"composer": "Test Composer",
+"score": "Test Score"
+}
+
+### Scores Show
+GET http://localhost:3000/scores/1.json
+
+### Scores Update
+PATCH http://localhost:3000/scores/6.json
+Content-Type: application/json
+
+{
+"title": "New name",
+"composer": "New Composer",
+"score": "New Score"
+}
+
+### Scores Destroy
+DELETE http://localhost:3000/scores/6.json
