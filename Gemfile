@@ -50,3 +50,5 @@ end
 gem "jwt"
 
 gem 'http'
+
+gem 'flat_api', '~> 0.2.0'
