@@ -47,7 +47,7 @@ class ScoresController < ApplicationController
     score = Score.find_by(id: params[:id])
     score.title = params[:title] || score.title
     score.composer = params[:composer] || score.composer
-    score.score = params[:score] || score.score
+    # score.score = params[:score] || score.score
     score.save
     render json: score.as_json
   end
