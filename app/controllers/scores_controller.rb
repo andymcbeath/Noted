@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
   require "http"
-  
+
   def index
     scores = Score.all
     render json: scores.as_json
@@ -25,7 +25,6 @@ class ScoresController < ApplicationController
     score = Score.find_by(id: params[:id])
     score.title = params[:title] || score.title
     score.composer = params[:composer] || score.composer
-    # score.score = params[:score] || score.score
     score.save
     render json: score.as_json
   end
